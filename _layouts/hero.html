@@ -1,0 +1,129 @@
+---
+layout: default
+---
+
+<!-- <nav class="nav-middle">
+  <ul>
+    <li><a {% if page.url contains '/hero/' %}class="current"{% endif %} href="/hero/{{ page.role | downcase }}/{{ page.name | downcase }}/">overview</a></li>
+    <li><a {% if page.url contains '/hero/{{ page.role | downcase }}/{{ page.name | downcase }}' %}class="current"{% endif %} href="#">guides</a></li>
+  </ul>
+</nav> -->
+
+<section class="hero-section">
+  <div class="container">
+    <div class="hero-m">
+      <div class="hero-m-left">
+        <div class="hero-m-name">
+          <h1>{{ page.name }}</h1>
+          <p>{{ page.desc }}</p>
+        </div>
+        <div class="hero-m-img">
+          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase | replace: " ", "-" }}/{{ page.avatar }}" alt="{{ page.name | capitalize }}">
+        </div>
+        <div class="hero-price hero-m-price">
+          {% if page.bp and page.diamond %}
+          <p><img src="{{ site.data.path.heroes }}/bp.png" alt="">{{ page.bp }}</p>
+          <p><img src="{{ site.data.path.heroes }}/diamonds.png" alt="">{{ page.diamond }}</p>
+          {% elsif page.diamond == 'Recharge' %}
+          <p>Recharge at least 250</p>
+          {% else %}
+          <p>Free</p>
+          {% endif %}
+        </div>
+      </div>
+      <div class="hero-m-right">
+        <div class="m-meta">
+          <p>&#9666;	{{ page.role | upcase }}  &#9679;  {{ page.attackType | upcase }}  &#9679;  {{ page.speciality | upcase }} &#9656;</p>
+        </div>
+      </div>
+    </div>
+    <div class="hero-wrap">
+      <div class="hero-left">
+        <div class="hero-name">
+          <h1>{{ page.name }}</h1>
+          <p>{{ page.desc }}</p>
+        </div>
+        <div class="hero-meta box-shadow">
+          <div class="hero-img">
+            <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase | replace: " ", "-" }}/{{ page.name | downcase | append:".jpg" }}" alt="{{ page.name | capitalize }}">
+          </div>
+          <div class="hero-price">
+            {% if page.bp and page.diamond %}
+            <p><img src="{{ site.data.path.heroes }}/bp.png" alt="">{{ page.bp }}</p>
+            <p><img src="{{ site.data.path.heroes }}/diamonds.png" alt="">{{ page.diamond }}</p>
+            {% elsif page.bp and page.ticket %}
+            <p><img src="{{ site.data.path.heroes }}/bp.png" alt="">{{ page.bp }}</p>
+            <p><img src="{{ site.data.path.heroes }}/ticket.png" alt="">{{ page.ticket }}</p>
+            {% elsif page.diamond == 'Recharge' %}
+            <p>Recharge at least 250</p>
+            {% else %}
+            <p>Free</p>
+            {% endif %}
+          </div>
+          <div class="meta"><p><b>Role</b> : {{ page.role }}</p></div>
+          <div class="meta"><p><b>Attack Type</b> : {{ page.attackType }}</p></div>
+          <div class="meta"><p><b>Speciality</b> : {{ page.speciality }}</p></div>
+        </div>
+      </div>
+      <div class="hero-right">
+        <div class="tab">
+          <button class="tablinks" onclick="openTabs(event, 'hero-skills', 'tablinks', 'tabcontent', 'block')" id="defaultOpen">Skills</button>
+          <button class="tablinks" onclick="openTabs(event, 'hero-attr', 'tablinks', 'tabcontent', 'block')">Attributes</button>
+          <button class="tablinks" onclick="openTabs(event, 'hero-lore', 'tablinks', 'tabcontent', 'block')">Lore</button>
+        </div>
+        <div id="hero-attr" class="tabcontent clearfix">
+          {% for stats in page.stats %}
+          <div class="attr">
+            <p class="attr-name">{{ stats.name | upcase }} :</p>
+            <p class="attr-value">{% if stats.value %}{{ stats.value }}{% else %}0{% endif %}</p>
+          </div>
+          {% endfor %}
+        </div>
+        <div id="hero-lore" class="tabcontent">
+          <p>{{ page.lore }}</p>
+        </div>
+        <div id="hero-skills" class="tabcontent">
+          {% for skill in page.skills %}
+          <div class="skill">
+            <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase | replace: " ", "-" }}/skill/skill-{{ skill.num }}.png" alt="{{ skill.skillName }}">
+            <div class="skill-meta">
+              <p><b>{{ skill.name }}</b></p>
+              {% if skill.cd and skill.mana %}
+              <p class="cd">CD: {{ skill.cd }}</p>
+              <p class="mana">Mana: {{ skill.mana }}</p>
+              {% elsif skill.cd %}
+              <p class="cd">CD: {{ skill.cd }}</p>
+              {% elsif skill.mana %}
+              <p class="mana">CD: {{ skill.mana }}</p>
+              {% else %}
+              <p class="else">Passive</p>
+              {% endif %}
+              <p>{{ skill.desc }}</p>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+      </div>
+    </div>
+
+
+
+    <div class="hero-guides" id="guides-hero">
+      <h1>Guides {{ page.name | capitalize }}</h1>
+      <div class="hero-guide-wrap clearfix">
+        {% assign name = page.name | capitalize %}
+        {% assign guide_hero = site.guides | where:"category",name %}
+        {% for guide in guide_hero %}
+        <div class="hero-guide box-shadow">
+          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase }}/{{ page.avatar }}" alt="{{ page.name }} Avatar">
+          <div class="hero-guide-info">
+            <h2 class="hero-guide-title"><a href="{{ guide.url }}">{{ guide.title }}</a></h2>
+            <p class="date">Updated on {{ guide.date | date_to_long_string }}</p>
+          </div>
+        </div>
+        {% endfor %}
+      </div>
+    </div>
+
+  </div>
+</section>

@@ -1,0 +1,182 @@
+# ========= ASSASSIN =========
+- role: assassin
+  heroes:
+  - name: Fanny
+    avatar: /assets/gambar/heroes/assassin/fanny/AS-Fanny-Avatar.png #1
+
+  - name: Hayabusa
+    avatar: /assets/gambar/heroes/assassin/hayabusa/AS-Hayabusa-Avatar.png #2
+
+  - name: Helcurt
+    avatar: /assets/gambar/heroes/assassin/helcurt/AS-Helcurt-Avatar.png #3
+
+  - name: Karina
+    avatar: /assets/gambar/heroes/assassin/karina/AS-Karina-Avatar.png #4
+
+  - name: Lancelot
+    avatar: /assets/gambar/heroes/assassin/lancelot/AS-Lancelot-Avatar.png #5
+
+  - name: Natalia
+    avatar: /assets/gambar/heroes/assassin/natalia/AS-Natalia-Avatar.png #6
+
+  - name: Saber
+    avatar: /assets/gambar/heroes/assassin/saber/AS-Saber-Avatar.png #7
+
+
+# ========= FIGHTER =========
+
+- role: fighter
+  heroes:
+  - name: Alpha
+    avatar: /assets/gambar/heroes/fighter/alpha/FI-Alpha-Avatar.png #1
+
+  - name: Alucard
+    avatar: /assets/gambar/heroes/fighter/alucard/FI-Alucard-Avatar.png #2
+
+  - name: Argus
+    avatar: /assets/gambar/heroes/fighter/argus/FI-Argus-Avatar.png #3
+
+  - name: Balmond
+    avatar: /assets/gambar/heroes/fighter/balmond/FI-Balmond-Avatar.png #4
+
+  - name: Bane
+    avatar: /assets/gambar/heroes/fighter/bane/FI-Bane-Avatar.png #5
+
+  - name: Chou
+    avatar: /assets/gambar/heroes/fighter/chou/FI-Chou-Avatar.png #6
+
+  - name: Freya
+    avatar: /assets/gambar/heroes/fighter/freya/FI-Freya-Avatar.png #7
+
+  - name: Hilda
+    avatar: /assets/gambar/heroes/fighter/hilda/FI-Hilda-Avatar.png #8
+
+  - name: Lapu-Lapu
+    avatar: /assets/gambar/heroes/fighter/lapu-lapu/FI-Lapu-Lapu-Avatar.png #9
+
+  - name: Roger
+    avatar: /assets/gambar/heroes/fighter/roger/FI-Roger-Avatar.png #10
+
+  - name: Ruby
+    avatar: /assets/gambar/heroes/fighter/ruby/FI-Ruby-Avatar.png #11
+
+  - name: Sun
+    avatar: /assets/gambar/heroes/fighter/sun/FI-Sun-Avatar.png #12
+
+  - name: Zilong
+    avatar: /assets/gambar/heroes/fighter/zilong/FI-Zilong-Avatar.png #13
+
+
+# ========= MAGE =========
+
+- role: mage
+  heroes:
+  - name: Alice
+    avatar: /assets/gambar/heroes/mage/alice/MA-Alice-Avatar.png #1
+
+  - name: Aurora
+    avatar: /assets/gambar/heroes/mage/aurora/MA-Aurora-Avatar.png #2
+
+  - name: Cyclops
+    avatar: /assets/gambar/heroes/mage/cyclops/MA-Cyclops-Avatar.png #3
+
+  - name: Eudora
+    avatar: /assets/gambar/heroes/mage/eudora/MA-Eudora-Avatar.png #4
+
+  - name: Gord
+    avatar: /assets/gambar/heroes/mage/gord/MA-Gord-Avatar.png #5
+
+  - name: Harley
+    avatar: /assets/gambar/heroes/mage/harley/MA-Harley-Avatar.png #6
+
+  - name: Kagura
+    avatar: /assets/gambar/heroes/mage/kagura/MA-Kagura-Avatar.png #7
+
+  - name: Odette
+    avatar: /assets/gambar/heroes/mage/odette/MA-Odette-Avatar.png #8
+
+  - name: Vexana
+    avatar: /assets/gambar/heroes/mage/vexana/MA-Vexana-Avatar.png #9
+
+  - name: Zhask
+    avatar: /assets/gambar/heroes/mage/zhask/MA-Zhask-Avatar.png #10
+
+
+# ========= MARKSMAN =========
+
+- role: marksman
+  heroes:
+  - name: Bruno
+    avatar: /assets/gambar/heroes/marksman/bruno/KS-Bruno-Avatar.png #1
+
+  - name: Clint
+    avatar: /assets/gambar/heroes/marksman/clint/KS-Clint-Avatar.png #2
+
+  - name: Irithel
+    avatar: /assets/gambar/heroes/marksman/irithel/KS-Irithel-Avatar.png #3
+
+  - name: Karrie
+    avatar: /assets/gambar/heroes/marksman/karrie/KS-Karrie-Avatar.png #4
+
+  - name: Layla
+    avatar: /assets/gambar/heroes/marksman/layla/KS-Layla-Avatar.png #5
+
+  - name: Miya
+    avatar: /assets/gambar/heroes/marksman/miya/KS-Miya-Avatar.png #6
+
+  - name: Moskov
+    avatar: /assets/gambar/heroes/marksman/moskov/KS-Moskov-Avatar.png #7
+
+  - name: Yi Sun-shin
+    avatar: /assets/gambar/heroes/marksman/yi-sun-shin/KS-Yi Sun-Shin-Avatar.png #8
+
+
+# ========= SUPPORT =========
+
+- role: support
+  heroes:
+  - name: Diggie
+    avatar: /assets/gambar/heroes/support/diggie/SU-Diggie-Avatar.png #1
+
+  - name: Estes
+    avatar: /assets/gambar/heroes/support/estes/SU-Estes-Avatar.png #2
+
+  - name: Nana
+    avatar: /assets/gambar/heroes/support/nana/SU-Nana-Avatar.png #3
+
+  - name: Rafaela
+    avatar: /assets/gambar/heroes/support/rafaela/SU-Rafaela-Avatar.png #4
+
+
+# ========= TANK =========
+
+- role: tank
+  heroes:
+  - name: Akai
+    avatar: /assets/gambar/heroes/tank/akai/TA-Akai-Avatar.png #1
+
+  - name: Franco
+    avatar: /assets/gambar/heroes/tank/franco/TA-Franco-Avatar.png #2
+
+  - name: Gatotkaca
+    avatar: /assets/gambar/heroes/tank/gatotkaca/TA-Gatotkaca-Avatar.png #3
+
+  - name: Grock
+    avatar: /assets/gambar/heroes/tank/grock/TA-Grock-Avatar.png #4
+
+  - name: Hylos
+    avatar: /assets/gambar/heroes/tank/hylos/TA-Hylos-Avatar.png #5
+
+  - name: Johnson
+    avatar: /assets/gambar/heroes/tank/johnson/TA-Johnson-Avatar.png #6
+
+  - name: Lolita
+    avatar: /assets/gambar/heroes/tank/lolita/TA-Lolita-Avatar.png #7
+
+  - name: Minotaur
+    avatar: /assets/gambar/heroes/tank/minotaur/TA-Minotaur-Avatar.png #8
+
+  - name: Tigreal
+    avatar: /assets/gambar/heroes/tank/tigreal/TA-Tigreal-Avatar.png #9
+
+# ========= END OF HEROES DATABASE =========

@@ -1,0 +1,20 @@
+---
+layout: default
+title: Items
+permalink: /items/
+header: /assets/gambar/items-header.jpg
+---
+<section class="items-section">
+	<div class="container">
+    <div class="hero-flex">
+			{% for items in site.data.items %}
+      <div class="hero item-w">
+        <a href="">
+          <img class="hero-avatar" src="/assets/gambar/items/{{ items.name | replace:"'", "" | downcase | append:".png" }}" alt="{{ items.name }}">
+        </a>
+        <p><a href="">{{ items.name | replace: "-"," " | capitalize }}</a></p>
+      </div>
+      {% endfor %}
+    </div>
+	</div>
+</section>

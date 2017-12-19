@@ -1,0 +1,30 @@
+.heroes
+  padding: 50px 0
+
+.hero-flex
+  display: flex
+  flex-flow: row wrap
+  justify-content: center
+  text-align: center
+.hero
+  margin: 0 12px 20px 12px
+.hero-avatar
+  width: 80px
+  height: 80px
+  border-radius: 50%
+  border: 2px solid $link-color
+  transition: 0.1s
+  &:hover
+    box-shadow: 0px 0px 40px -4px #fc0
+  p
+    font-weight: 500
+    margin: 10px 0 15px 0
+
+@media (max-width: 975px)
+  .hero
+    a
+      .hero-avatar
+        width: 70px
+        height: 70px
+    p
+      font-size: 0.9em

@@ -1,0 +1,263 @@
+// .nav-middle
+//   text-align: center
+//   margin-bottom: 20px
+//   background: $first
+//   ul
+//     margin: 0
+//     li
+//       display: inline-block
+//       a
+//         text-decoration: none
+//         padding: 0 1em
+//         color: $primary-dark
+//         text-transform: uppercase
+//         transition: 0.3s
+//         border-radius: 3px 3px 0 0
+//         height: 48px
+//         line-height: 48px
+//         display: inline-block
+//         font-weight: 500
+//         &:hover
+//           background-color: darken($first, 2%)
+//       .current
+//         background-color: $first
+//         border-bottom: 2px solid $link-color
+//         color: $primary-color
+.hero-section
+  padding: 30px 0
+.hero-m
+  background: $first
+  flex-flow: column wrap
+  display: none
+.hero-m-name
+  text-align: center
+  h1
+    margin: 10px 0 0
+  p
+    margin: 5px 0 13px
+.hero-m-img
+  border-radius: 50%
+  border: 2px solid $link-color
+  max-width: 100px
+  max-height: 100px
+  overflow: hidden
+  margin: 0 auto
+  img
+    max-width: 100%
+.hero-m-price
+  p:last-child
+    margin: 0
+.hero-m-right
+  display: flex
+.m-meta
+  width: 100%
+  background: $link-color
+  color: black
+  p
+    text-align: center
+    font-weight: 500
+.hero-wrap
+  display: flex
+  justify-content: center
+.hero-left
+  margin-right: 20px
+  max-width: 30%
+.hero-name
+  text-align: center
+  h1
+    margin: 10px 0
+    position: relative
+    &:after
+      content: ""
+      width: 70%
+      height: 1px
+      background-color: $first
+      position: absolute
+      bottom: -5px
+      left: 42px
+      z-index: -1
+  p
+    margin: 10px 0
+.hero-meta
+  background-color: $first
+  padding: 10px
+.hero-img
+  max-width: 300px
+  max-height: 400px
+  overflow: hidden
+  img
+    max-width: 100%
+    max-height: 100%
+.hero-price
+  text-align: center
+  margin: 5px 0 20px 0
+  & > p
+    display: inline-block
+    margin: 0 20px 0 0
+    img
+      max-width: 22px
+      position: relative
+      top: 5px
+      right: 5px
+.meta
+  p
+    margin: 12px 0
+    b
+      float: left
+      width: 100px
+
+.hero-right
+  padding-top: 78px
+  max-width: 70%
+.tab
+  overflow: auto
+  white-space: nowrap
+  display: flex
+  button
+    background-color: lighten($first, 5%)
+    color: $primary-dark
+    border: none
+    outline: none
+    cursor: pointer
+    padding: 14px 30px
+    transition: 0.3s
+    border-radius: 3px 3px 0 0
+    &:hover
+      background-color: darken($first, 2%)
+    &.active
+      background-color: $first
+      border-top: 1px solid $link-color
+      color: $primary-color
+.tabcontent
+  display: none
+  padding: 6px 12px
+  border-top: none
+  background-color: $first
+  box-shadow: 0px 0px 4px 0px rgba(0,0,0,0.5)
+  -webkit-animation: fadeEffect 1s
+  animation: fadeEffect 1s
+
+  @keyframes fadeEffect
+      from
+        opacity: 0
+      to
+        opacity: 1
+
+#hero-attr
+  padding: 20px
+.attr
+  float: left
+  width: 50%
+  margin-bottom: 7px
+  p
+    margin: 0
+.attr-name
+  float: left
+  width: 50%
+  color: $primary-color
+.attr-value
+  float: right
+  width: 50%
+  color: $link-color
+  font-weight: 500
+
+#hero-lore
+  p
+    line-height: 1.5
+    text-indent: 35px
+
+#hero-skills
+  padding: 40px 15px
+.skill
+  display: flex
+  margin-bottom: 48px
+  &:last-child
+    margin-bottom: 0
+  img
+    max-width: 60px
+    max-height: 60px
+    border: 1px solid $link-color
+    border-radius: 50%
+.skill-meta
+  margin-left: 15px
+  p:first-child
+    margin: 0 0 5px 0
+  p:last-child
+    margin: 0
+    line-height: 20px
+
+  p.cd, p.mana, p.else
+    color: skyblue
+    margin: 0 0 5px
+  p.cd, p.mana
+    display: inline-block
+  p.cd
+    margin-right: 10px
+
+.hero-guides
+  h1
+    text-align: center
+    border-bottom: 1px solid $first
+    padding: 30px 0
+    margin: 0
+.hero-guide-wrap
+  display: flex
+  flex-wrap: wrap
+  justify-content: center
+  padding: 20px 0
+.hero-guide
+  display: flex
+  width: 45%
+  margin-right: 10px
+  background-color: $first
+  padding: 10px
+  margin-bottom: 10px
+  img
+    width: 100px
+    height: 100px
+.hero-guide-info
+  margin-left: 10px
+  h2.hero-guide-title
+    margin: 0 0 5px 0
+    font-family: Roboto
+    font-weight: 500
+    font-size: 20px
+    border-bottom: 1px solid lighten($first, 5%)
+    @extend %link
+  p.date
+    font-size: 14px
+    margin: 0 0 5px 0
+    color: $primary-dark
+  p
+    margin: 0
+    color: $primary-dark
+
+// ========= END OF GUIDE ===========
+@media (max-width: 990px)
+  .hero-section
+    padding: 0 0 30px
+    .hero-m
+      display: flex
+    .hero-left
+      display: none
+    .hero-right
+      max-width: 100%
+      padding-top: 50px
+
+@media (max-width: 890px)
+  #hero-attr
+    .attr-name
+      width: 80%
+    .attr-value
+      width: 20%
+
+@media (max-width: 605px)
+  #hero-attr
+    .attr
+      float: none
+      width: 100%
+      padding-bottom: 17px
+  .hero-guide-wrap
+    flex-direction: column
+  .hero-guide
+    width: auto

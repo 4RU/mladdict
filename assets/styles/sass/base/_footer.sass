@@ -1,0 +1,46 @@
+footer
+  background-color: $headfoot
+  padding: 20px 0
+  font-size: 14px
+.footer-flex
+  display: flex
+  justify-content: space-between
+.left-footer
+  @extend %link
+.nav-bottom
+  ul
+    padding: 0
+    margin: 0
+    li
+      display: inline-block
+      list-style-type: none
+      padding-right: 15px
+      padding-left: 15px
+      border-right: 1px solid $primary-color
+      &:nth-child(1)
+        padding-left: 0
+      &:nth-last-child(1)
+        border-right: none
+
+.right-footer
+  p
+    margin: 0 0 10px 0
+.social
+  a
+    text-decoration: none
+    img
+      border-radius: 50%
+      max-width: 30px
+      margin-right: 15px
+
+@media (max-width: 1116px)
+  footer
+    padding: 20px 50px
+
+@media (max-width: 669px)
+  .footer-flex
+    flex-direction: column
+    .left-footer
+      text-align: center
+    .right-footer
+      text-align: center

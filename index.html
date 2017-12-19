@@ -1,0 +1,43 @@
+---
+layout: default
+title: Heroes
+header: /assets/gambar/index/banner.jpg
+---
+<section class="heroes">
+  <div class="container hero-nav">
+    <div class="role-list">
+      <p class="heromaintab" onclick="openTabs(event, 'all', 'heromaintab', 'heromaincontent', 'flex')" id="defaultMainOpen">all</p>
+      <p class="heromaintab" onclick="openTabs(event, 'assassin-main', 'heromaintab', 'heromaincontent', 'flex')">assassin</p>
+      <p class="heromaintab" onclick="openTabs(event, 'fighter-main', 'heromaintab', 'heromaincontent', 'flex')">fighter</p>
+      <p class="heromaintab" onclick="openTabs(event, 'mage-main', 'heromaintab', 'heromaincontent', 'flex')">mage</p>
+      <p class="heromaintab" onclick="openTabs(event, 'marksman-main', 'heromaintab', 'heromaincontent', 'flex')">marksman</p>
+      <p class="heromaintab" onclick="openTabs(event, 'support-main', 'heromaintab', 'heromaincontent', 'flex')">support</p>
+      <p class="heromaintab" onclick="openTabs(event, 'tank-main', 'heromaintab', 'heromaincontent', 'flex')">tank</p>
+    </div>
+    <div id="all" class="heromaincontent hero-flex">
+      {% for heroes in site.data.heroes %}
+      {% for hero in heroes.heroes %}
+      <div class="hero">
+        <a href="/hero/{{ heroes.role }}/{{ hero.name | downcase }}">
+          <img class="hero-avatar" src="{{ hero.avatar }}" alt="{{ hero.name }}">
+        </a>
+        <p>{{ hero.name }}</p>
+      </div>
+      {% endfor %}
+      {% endfor %}
+    </div>
+    {% for heroes in site.data.heroes %}
+    <div id="{{ heroes.role }}-main" class="heromaincontent hero-flex">
+      {% for hero in heroes.heroes %}
+      <div class="hero">
+        <a href="/hero/{{ heroes.role }}/{{ hero.name | downcase }}">
+          <img class="hero-avatar" src="{{ hero.avatar }}" alt="{{ hero.name }}">
+        </a>
+        <p>{{ hero.name }}</p>
+      </div>
+      {% endfor %}
+    </div>
+    {% endfor %}
+
+  </div>
+</section>

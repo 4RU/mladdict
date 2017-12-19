@@ -1,0 +1,28 @@
+<header class="main-bg" {% if page.header %}style="background-image: url({{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase | replace: " ", "-" }}/{{ page.name | downcase | replace: " ", "-" | append:'-big.jpg' }});"{% endif %}>
+  <div class="container">
+    {% include nav_top.html %}
+    <div class="hero-nav">
+      <h2>Quick Navigation</h1>
+      <div class="role-list">
+        <p class="herotab" onclick="openTabs(event, 'assassin', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/assassin/' %}id="defaultHeroOpen"{% endif %}>assassin</p>
+        <p class="herotab" onclick="openTabs(event, 'fighter', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/fighter/' %}id="defaultHeroOpen"{% endif %}>fighter</p>
+        <p class="herotab" onclick="openTabs(event, 'mage', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/mage/' %}id="defaultHeroOpen"{% endif %}>mage</p>
+        <p class="herotab" onclick="openTabs(event, 'marksman', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/marksman/' %}id="defaultHeroOpen"{% endif %}>marksman</p>
+        <p class="herotab" onclick="openTabs(event, 'support', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/support/' %}id="defaultHeroOpen"{% endif %}>support</p>
+        <p class="herotab" onclick="openTabs(event, 'tank', 'herotab', 'herocontent', 'flex')" {% if page.url contains '/hero/tank/' %}id="defaultHeroOpen"{% endif %}>tank</p>
+      </div>
+      {% for heroes in site.data.heroes %}
+      <div id="{{ heroes.role }}" class="herocontent hero-flex">
+        {% for hero in heroes.heroes %}
+        <div class="hero">
+          <a href="/hero/{{ heroes.role }}/{{ hero.name | downcase }}">
+            <img class="hero-avatar" src="{{ hero.avatar }}" alt="{{ hero.name }}">
+          </a>
+          <p>{{ hero.name }}</p>
+        </div>
+        {% endfor %}
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+</header>

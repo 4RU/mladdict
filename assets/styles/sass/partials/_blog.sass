@@ -1,0 +1,55 @@
+.blog-section
+  padding: 30px 0 0
+.latest
+  border-bottom: 2px solid $link-color
+  font-size: 2em
+  padding-bottom: 2px
+.blog-list
+  display: flex
+  justify-content: center
+  flex-wrap: wrap
+.blog
+  width: 22%
+  margin: 10px 30px 10px 0
+  color: $secondary-color
+  background: $light-bg
+  &:nth-child(4)
+    margin: 10px 0 10px 0
+  .blog-img
+    max-width: 100%
+    max-height: 150px
+    overflow: hidden
+    img
+      max-width: 100%
+  .blog-meta
+    padding: 10px
+    h3, p
+      margin: 0
+    p
+      color: lighten(#111, 40%)
+    h3.blog-title
+      font-size: 20px
+      font-family: Roboto
+      a
+        text-decoration: none
+        color: #111
+        &:hover
+          color: lighten(#111, 10%)
+
+@media (max-width: 800px)
+  .latest
+    margin: 0 0 5px
+    display: inline-block
+  .blog-list
+    flex-direction: column
+  .blog
+    width: auto
+    margin: 0
+    display: flex
+    padding: 5px 0 5px 5px
+    &:nth-child(4)
+      margin: 0
+    .blog-img
+      width: 30%
+    .blog-meta
+      width: 70%

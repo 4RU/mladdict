@@ -1,0 +1,47 @@
+.post-section
+  background: $light-bg
+  color: $secondary-color
+  padding: 10px 0 50px
+  p
+    margin: 0
+.post-thumb
+  margin: 0 auto
+  max-height: 500px
+  overflow: hidden
+  text-align: center
+  padding: 0 10px
+  img
+    max-width: 100%
+.post
+  max-width: 70%
+  margin: 0 auto
+  padding: 30px 0
+  border-bottom: 2px solid $primary-color
+  p
+    font-size: 18px
+  a
+    color: $link-hover
+    text-decoration: none
+    &:hover
+      color: $link-color
+  .post-date
+    color: lighten(#111, 40%)
+    font-size: 18px
+.post-meta
+  padding: 0 0 20px
+.post-title
+  margin: 0
+  padding-bottom: 5px
+  font-family: Roboto
+  font-size: 38px
+
+@media (max-width: 605px)
+  .post
+    max-width: 100%
+    padding: 30px 10px
+    p
+      font-size: 16px
+    .post-date
+      font-size: 14px
+    .post-title
+      font-size: 28px

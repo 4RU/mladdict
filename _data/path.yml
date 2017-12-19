@@ -1,0 +1,7 @@
+heroes: /assets/gambar/heroes
+assassin: /assets/gambar/heroes/assassin
+fighter: /assets/gambar/heroes/fighter
+mage: /assets/gambar/heroes/mage
+marksman: /assets/gambar/heroes/marksman
+support: /assets/gambar/heroes/support
+tank: /assets/gambar/heroes/tank

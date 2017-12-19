@@ -1,0 +1,76 @@
+---
+layout: default
+---
+<section class="guide-section">
+  <div class="container guide-flex">
+    <div class="guide-left">
+      <div class="guide box-shadow">
+        <div class="guide-meta">
+          <div class="guide-img">
+            <img src="{{ page.img }}" alt="{{ page.category }}">
+          </div>
+          <div class="guide-info">
+            <h1 class="guide-title">{{ page.title }}</h1>
+            <p class="date">Updated on {{ page.date | date_to_long_string }}</p>
+            <p>Hero: <a href="/hero/assassin/{{ page.category | downcase }}">{{ page.category | capitalize }}</a></p>
+          </div>
+        </div>
+        {% if page.skills %}
+        <div class="guide-sub clearfix">
+          <h2>Purchase Order</h2>
+          <div class="guide-items">
+            {% for purchase in page.purchase %}
+            <div class="guide-item">
+              <h3 class="items-phase">{{ purchase.phase }}</h3>
+              {% for items in purchase.items %}
+              <img src="/assets/gambar/items/{{ items.name | replace: ' ', '-' | replace: "'", "" | downcase | append: '.png' }}" alt="{{ items.name }}">
+              {% endfor %}
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        {% if page.skills %}
+        <div class="guide-sub">
+          <h2>Hero Skills</h2>
+          <div class="guide-skills">
+            {% for skills in page.skills %}
+            <div class="guide-skill">
+              <div class="guide-skill-img">
+                <img src="/assets/gambar/heroes/assassin/{{ page.category | downcase }}/skill/{{ skills.img }}" alt="{{ skills.name }}">
+              </div>
+              <div class="guide-skill-fill">
+                {% for level in skills.level %}
+                <div class="{% if level.fill %}fill{% endif %} skill-check" ><p>{% if level.fill %}{{ level.number }}{% endif %}</p></div>
+                {% endfor %}
+              </div>
+            </div>
+            {% endfor %}
+          </div>
+        </div>
+        {% endif %}
+        <div class="guide-sub">
+          {{ content }}
+        </div>
+      </div>
+    </div>
+
+    <div class="guide-right">
+      <div class="guide-nav">
+        <h2>Guide Hero Lain</h2>
+        <label for="id_label_single">
+          Klik untuk mengganti hero
+          <select name="heroes" id="hero-guide-nav" style="width: 100%">
+            {% for heroes in site.data.heroes %}
+            <optgroup label="{{ heroes.role | capitalize }}">
+              {% for hero in heroes.heroes %}
+              <option value="/hero/{{ heroes.role | downcase }}/{{ hero.name | downcase }}#guides-hero">{{ hero.name | capitalize }}</option>
+              {% endfor %}
+            </optgroup>
+            {% endfor %}
+          </select>
+        </label>
+      </div>
+    </div>
+  </div>
+</section>

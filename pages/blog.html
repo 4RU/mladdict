@@ -1,0 +1,28 @@
+---
+layout: default
+title: Blog
+description: Blog segar dan menyehatkan
+permalink: /blog/
+---
+
+<section class="blog-section">
+  <div class="container">
+    <h2 class="latest">Post Terbaru</h2>
+    <div class="blog-list">
+      {% for post in site.posts %}
+      <article class="blog">
+        <div class="blog-img">
+          <a href="{{ post.url }}">
+            <img src="{{ post.thumbnail }}" alt="">
+          </a>
+        </div>
+        <div class="blog-meta">
+          <h3 class="blog-title"><a href="{{ post.url }}">{{ post.title }}</a></h2>
+          <p class="blog-date">{{ post.date | date_to_long_string }}</p>
+          <!-- <p class="blog-tag">{{ post.tags }}</p> -->
+        </div>
+      </article>
+      {% endfor %}
+    </div>
+  </div>
+</section>
