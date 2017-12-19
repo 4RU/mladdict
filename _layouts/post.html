@@ -4,18 +4,22 @@ layout: default
 
 <section class="post-section">
   <div class="container">
-    <div class="post-thumb">
-      <img src="{{ page.thumbnail }}" alt="">
-    </div>
-    <div class="post">
-      <div class="post-meta">
-        <h1 class="post-title">{{ page.title }}</h1>
-        <p class="post-date">{{ page.date | date_to_long_string }}</p>
+    <div class="the-post">
+      <div class="post-thumb">
+        <img src="{{ page.thumbnail }}" alt="">
       </div>
-      {{ content }}
+      <div class="post">
+        <div class="post-meta">
+          <h1 class="post-title">{{ page.title }}</h1>
+          <p class="post-date">{{ page.date | date_to_long_string }}</p>
+        </div>
+        {{ content }}
+      </div>
     </div>
 
+    <div class="disqus-wrap">
     {% include disqus.html %}
+    </div>
 
   </div>
 </section>
