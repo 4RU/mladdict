@@ -31,7 +31,7 @@ collections:
             slug: "{{ slug }}"
             filter:
               field: category
-              value: argus
+              value: fanny
             fields:
               - {label: "Title", name: "title", widget: "string"}
               - {label: "Publish Date", name: "date", widget: "datetime"}
@@ -43,7 +43,7 @@ collections:
                 widget: "object"
                 required: false
                 fields:
-                  - {label: "Build Number", name: "phase", widget: "hidden", default: "1"}
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "1"},
                     label: "Items"
                     name: "items"
                     widget: "object"
