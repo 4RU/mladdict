@@ -7,7 +7,7 @@ layout: default
       <div class="guide box-shadow">
         <div class="guide-meta">
           <div class="guide-img">
-            <img src="{{ page.img }}" alt="{{ page.category }}">
+            <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.category | downcase }}/{{ page.category | downcase | append: "-avatar.png" }}" alt="{{ page.category }}">
           </div>
           <div class="guide-info">
             <h1 class="guide-title">{{ page.title }}</h1>

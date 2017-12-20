@@ -1,0 +1,355 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional;, defaults to master)
+
+media_folder: "assets/gambar/uploads"
+public_folder: "/assets/gambar/uploads"
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image/Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "guides" # Used in routes, e.g., /admin/collections/blog
+    label: "Guides" # Used in the UI
+    folders:
+      - name: "assassin"
+        label: "Assassin"
+        folders:
+          - name: "fanny"
+            label: "Fanny"
+            folder: _guides/assassin/fanny/
+            create: true
+            slug: "{{ slug }}"
+            filter:
+              field: category
+              value: argus
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Publish Date", name: "date", widget: "datetime"}
+              - {label: "Hero Name", name: "category", widget: "hidden", default: "fanny"}
+              - {label: "Hero Role", name: "role", widget: "hidden", default: "assassin"}
+              - {label: "Publish Date", name: "date", widget: "datetime"}
+              - label: "Purchase Order"
+                name: "purchase"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "1"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "2"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "3"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+              - label: "skills"
+                name: "Skills"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Skill 1 Image", name: "img", widget: "hidden", default: "skill-2.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                  - {label: "Skill 2 Image", name: "img", widget: "hidden", default: "skill-3.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                  - {label: "Skill 3 Image", name: "img", widget: "hidden", default: "skill-4.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+              - {label: "Body", name: "body", widget: "markdown"}
+      - name: "fighter"
+        label: "Fighter"
+        folders:
+          - name: "argus"
+            label: "Argus"
+            folder: _guides/fighter/argus/
+            create: true
+            slug: "{{ slug }}"
+            filter:
+              field: category
+              value: argus
+            fields:
+              - {label: "Title", name: "title", widget: "string"}
+              - {label: "Publish Date", name: "date", widget: "datetime"}
+              - {label: "Hero Name", name: "category", widget: "hidden", default: "argus"}
+              - {label: "Hero Role", name: "role", widget: "hidden", default: "fighter"}
+              - {label: "Publish Date", name: "date", widget: "datetime"}
+              - label: "Purchase Order"
+                name: "purchase"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "1"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "2"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+                  - {label: "Build Number", name: "phase", widget: "hidden", default: "3"}
+                    label: "Items"
+                    name: "items"
+                    widget: "object"
+                    fields:
+                      - {label: "Item 1", name: "name", widget: "string"}
+                      - {label: "Item 2", name: "name", widget: "string"}
+                      - {label: "Item 3", name: "name", widget: "string"}
+                      - {label: "Item 4", name: "name", widget: "string"}
+                      - {label: "Item 5", name: "name", widget: "string"}
+                      - {label: "Item 6", name: "name", widget: "string"}
+              - label: "skills"
+                name: "Skills"
+                widget: "object"
+                required: false
+                fields:
+                  - {label: "Skill 1 Image", name: "img", widget: "hidden", default: "skill-2.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                  - {label: "Skill 2 Image", name: "img", widget: "hidden", default: "skill-3.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                  - {label: "Skill 3 Image", name: "img", widget: "hidden", default: "skill-4.png"}
+                    label: "Levels"
+                    name: "level"
+                    widget: "object"
+                    fields:
+                      - {label: "Skill 1", name: "number", widget: "hidden", default: "1"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 2", name: "number", widget: "hidden", default: "2"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 3", name: "number", widget: "hidden", default: "3"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 4", name: "number", widget: "hidden", default: "4"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 5", name: "number", widget: "hidden", default: "5"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 6", name: "number", widget: "hidden", default: "6"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 7", name: "number", widget: "hidden", default: "7"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 8", name: "number", widget: "hidden", default: "8"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 9", name: "number", widget: "hidden", default: "9"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 10", name: "number", widget: "hidden", default: "10"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 11", name: "number", widget: "hidden", default: "11"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 12", name: "number", widget: "hidden", default: "12"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 13", name: "number", widget: "hidden", default: "13"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 14", name: "number", widget: "hidden", default: "14"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+                      - {label: "Skill 15", name: "number", widget: "hidden", default: "15"}
+                        {label: "Fill", name: "fill", widget: "boolean", default: "false"}
+              - {label: "Body", name: "body", widget: "markdown"}

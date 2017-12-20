@@ -1,9 +1,8 @@
 ---
-layout: post
 title:  "Welcome to Jekyll!"
 date:   2014-04-20 09:11:03
-tags: jekyll update
 thumbnail: /assets/gambar/blog/HxH 2.jpg
+tags: jekyll update
 excerpt_separator: <!--more-->
 ---
 

@@ -17,6 +17,18 @@ defaults:
       type: "posts"
     values:
       layout: "post"
+  -
+    scope:
+      path: ""
+      type: "guides"
+    values:
+      layout: "guide"
+  -
+    scope:
+      path: ""
+      type: "heroes"
+    values:
+      layout: "hero"
 
 exclude: ["Gemfile",
           "Gemfile.lock",

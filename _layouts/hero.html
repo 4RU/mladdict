@@ -112,11 +112,11 @@ comments: true
     <div class="hero-guides" id="guides-hero">
       <h1>Guides {{ page.name | capitalize }}</h1>
       <div class="hero-guide-wrap clearfix">
-        {% assign name = page.name | capitalize %}
+        {% assign name = page.name | downcase %}
         {% assign guide_hero = site.guides | where:"category",name %}
         {% for guide in guide_hero %}
         <div class="hero-guide box-shadow">
-          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase }}/{{ page.avatar }}" alt="{{ page.name }} Avatar">
+          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase }}/{{ page.name | downcase | append: "-avatar.png" }}" alt="{{ page.name }} Avatar">
           <div class="hero-guide-info">
             <h2 class="hero-guide-title"><a href="{{ guide.url }}">{{ guide.title }}</a></h2>
             <p class="date">Updated on {{ guide.date | date_to_long_string }}</p>
