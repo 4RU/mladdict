@@ -1,0 +1,72 @@
+backend:
+  name: git-gateway
+  branch: master # Branch to update (optional;, defaults to master)
+
+media_folder: "assets/gambar/uploads"
+public_folder: "/assets/gambar/uploads"
+
+collections:
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "_posts/" # The path to the folder where the documents are stored
+    create: true # Allow users to create new documents in this collection
+    slug: "{{year}}-{{month}}-{{day}}-{{slug}}" # Filename template, e.g., YYYY-MM-DD-title.md
+    fields: # The fields for each document, usually in front matter
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Featured Image/Thumbnail", name: "thumbnail", widget: "image"}
+      - {label: "Tags", name: "tags", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
+
+  - name: "_guides" # Used in routes, e.g., /admin/collections/blog
+    label: "Guides" # Used in the UI
+    folder: _guides/assassin/fanny/
+    create: true
+    slug: "{{ slug }}"
+    filter:
+      field: category
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Hero Name", name: "category", widget: "hidden", default: "fanny"}
+      - {label: "Hero Role", name: "role", widget: "hidden", default: "assassin"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - label: "Purchase Order"
+        name: "purchase"
+        widget: "object"
+        required: false
+        fields:
+          - {label: "Build Number", name: "phase", widget: "hidden", default: "1"}
+          - label: "Items"
+            name: "items"
+            widget: "object"
+            fields:
+              - {label: "Item 1", name: "name", widget: "string"}
+              - {label: "Item 2", name: "name", widget: "string"}
+              - {label: "Item 3", name: "name", widget: "string"}
+              - {label: "Item 4", name: "name", widget: "string"}
+              - {label: "Item 5", name: "name", widget: "string"}
+              - {label: "Item 6", name: "name", widget: "string"}
+          - {label: "Build Number", name: "phase", widget: "hidden", default: "2"}
+          - label: "Items"
+            name: "items"
+            widget: "object"
+            fields:
+              - {label: "Item 1", name: "name", widget: "string"}
+              - {label: "Item 2", name: "name", widget: "string"}
+              - {label: "Item 3", name: "name", widget: "string"}
+              - {label: "Item 4", name: "name", widget: "string"}
+              - {label: "Item 5", name: "name", widget: "string"}
+              - {label: "Item 6", name: "name", widget: "string"}
+          - {label: "Build Number", name: "phase", widget: "hidden", default: "3"}
+          - label: "Items"
+            name: "items"
+            widget: "object"
+            fields:
+              - {label: "Item 1", name: "name", widget: "string"}
+              - {label: "Item 2", name: "name", widget: "string"}
+              - {label: "Item 3", name: "name", widget: "string"}
+              - {label: "Item 4", name: "name", widget: "string"}
+              - {label: "Item 5", name: "name", widget: "string"}
+              - {label: "Item 6", name: "name", widget: "string"}
+      - {label: "Body", name: "body", widget: "markdown"}

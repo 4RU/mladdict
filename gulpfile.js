@@ -70,7 +70,7 @@ gulp.task('sass', function () {
 gulp.task('watch', function () {
     gulp.watch('assets/styles/**/*.+(sass|css)', ['sass']);
 });
-gulp.watch(['*.yml', '*.html', '_layouts/*.html', '_posts/*', 'pages/*.html', '_includes/*.html', '_data/**/*.yml', '_heroes/**/*.html', '_guides/**/*.+(html|md)', 'assets/scripts/*.js'], ['jekyll-rebuild']);
+gulp.watch(['*.yml', '*.html', '_layouts/*.html', '_posts/*', 'pages/*.html', '_includes/*.html', '_data/**/*.yml', '_heroes/**/*.html', 'admin/**/*.+(html|yml)', '_guides/**/*.+(html|md)', 'assets/scripts/*.js'], ['jekyll-rebuild']);
 
 /**
  * Default task, running just `gulp` will compile the sass,
