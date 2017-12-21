@@ -20,7 +20,7 @@ collections:
 
   - name: "_guides" # Used in routes, e.g., /admin/collections/blog
     label: "Guides" # Used in the UI
-    folder: _guides/assassin/fanny/
+    folder: _guides/
     create: true
     slug: "{{ slug }}"
     filter:
@@ -28,8 +28,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Hero Name", name: "category", widget: "hidden", default: "fanny"}
-      - {label: "Hero Role", name: "role", widget: "hidden", default: "assassin"}
+      - {label: "Hero Name", name: "category", widget: "hidden"}
+      - {label: "Hero Role", name: "role", widget: "hidden"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - label: "Purchase Order"
         name: "purchase"
