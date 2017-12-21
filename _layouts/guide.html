@@ -17,17 +17,17 @@ layout: default
         </div>
         {% if page.skills %}
         <div class="guide-sub clearfix">
-          <h2>Purchase Order</h2>
-          <div class="guide-items">
-            {% for purchase in page.purchase %}
-            <div class="guide-item">
-              <h3 class="items-phase">{{ purchase.phase }}</h3>
+          <h2>Item Build</h2>
+          {% for purchase in page.purchase %}
+          <div class="guide-item-phase">
+            <h3 class="items-phase">{{ purchase.phase }}</h3>
+            <div class="guide-items">
               {% for items in purchase.items %}
               <img src="/assets/gambar/items/{{ items | replace: ' ', '-' | replace: "'", "" | downcase | append: '.png' }}" alt="{{ items.name }}">
               {% endfor %}
             </div>
-            {% endfor %}
           </div>
+          {% endfor %}
         </div>
         {% endif %}
         {% if page.skills %}
@@ -37,7 +37,7 @@ layout: default
             {% for skills in page.skills %}
             <div class="guide-skill">
               <div class="guide-skill-img">
-                <img src="/assets/gambar/heroes/assassin/{{ page.category | downcase }}/skill/{{ skills.img }}" alt="{{ skills.name }}">
+                <img src="/assets/gambar/heroes/{{ page.role | downcase }}/{{ page.category | downcase }}/skill/{{ skills.img }}" alt="{{ skills.name }}">
               </div>
               <div class="guide-skill-fill">
                 {% for level in skills.level %}

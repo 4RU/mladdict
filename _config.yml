@@ -1,13 +1,13 @@
 url: "https://mladdict.netlify.com/"
 title: 'Mobile Legends Addict'
 
+permalink: pretty
 
 collections:
   heroes:
     permalink: /hero/:path/
     output: true
   guides:
-    permalink: /guide/
     output: true
 
 defaults:

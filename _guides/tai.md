@@ -13,22 +13,6 @@ purchase:
       - cursed sword
       - cursed sword
       - cursed sword
-  - phase: 2
-    items:
-      - tome of evil
-      - TOME OF EVIL
-      - cursed sword
-      - cursed sword
-      - cursed sword
-      - cursed sword
-  - phase: 3
-    items:
-      - tome of evil
-      - TOME OF EVIL
-      - cursed sword
-      - cursed sword
-      - cursed sword
-      - cursed sword
 skills:
   - img: skill-2.png
     level:

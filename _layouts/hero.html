@@ -19,7 +19,7 @@ comments: true
           <p>{{ page.desc }}</p>
         </div>
         <div class="hero-m-img">
-          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase | replace: " ", "-" }}/{{ page.avatar }}" alt="{{ page.name | capitalize }}">
+          <img src="{{ site.data.path.heroes }}/{{ page.role | downcase }}/{{ page.name | downcase }}/{{ page.name | downcase | append: "-avatar.png" }}" alt="{{ page.name | capitalize }}">
         </div>
         <div class="hero-price hero-m-price">
           {% if page.bp and page.diamond %}

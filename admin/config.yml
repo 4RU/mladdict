@@ -31,7 +31,7 @@ collections:
       - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Hero Name", name: "category", widget: "string"}
       - {label: "Hero Role", name: "role", widget: "string"}
-      - label: "Purchase Order"
+      - label: "Item Build"
         name: "purchase"
         widget: "list"
         required: false
