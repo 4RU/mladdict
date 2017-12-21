@@ -7,7 +7,7 @@ collections:
     permalink: /hero/:path/
     output: true
   guides:
-    permalink: /guide/:path/
+    permalink: /guide/
     output: true
 
 defaults:
