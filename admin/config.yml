@@ -25,6 +25,7 @@ collections:
     slug: "{{ slug }}"
     filter:
       field: category
+      value: fanny
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
@@ -36,9 +37,5 @@ collections:
         required: false
         fields:
           - {label: "Build Number", name: "phase", widget: "number"}
-          - label: "Items"
-            name: "items"
-            widget: "list"
-            field:
-              - {label: "Item Name", name: "item", widget: "string"}
+          - {label: "Items", name: "items", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
