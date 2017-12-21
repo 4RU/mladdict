@@ -14,7 +14,7 @@ All the pictures into the mind
 
 There's flashing in my eyes
 
-
+<br>
 
 Don't you see my condition?
 
@@ -24,7 +24,7 @@ Can't you see now illusions?
 
 Right into your mind
 
-
+<br>
 
 Déja Vu!
 
@@ -34,7 +34,7 @@ Higher on the street
 
 And I know it's my time to go
 
-
+<br>
 
 Calling you and the search is a mistery
 
@@ -44,7 +44,7 @@ It's so hard when I try to be me
 
 Wooh!
 
-
+<br>
 
 Déja Vu!
 
@@ -54,7 +54,7 @@ Higher on the beat
 
 And I know it's a place to go
 
-
+<br>
 
 Calling you and the search is mistery
 
@@ -64,7 +64,7 @@ It's so hard when I try to be me
 
 Yeah!
 
-
+<br>
 
 See the future into the present
 
@@ -74,7 +74,7 @@ Try to guess now what's going on
 
 And the band begins to play
 
-
+<br>
 
 Don't you see my condition?
 
@@ -84,7 +84,7 @@ Can't you see now illusions?
 
 Right into your mind
 
-
+<br>
 
 Déja Vu!
 
@@ -94,7 +94,7 @@ Higher on the street
 
 And I know it's my time to go
 
-
+<br>
 
 Calling you and the search is mistery
 
@@ -104,7 +104,7 @@ It's so hard when I try to be me
 
 Wooh!
 
-
+<br>
 
 Déja Vu!
 
@@ -114,7 +114,7 @@ Higher on the beat
 
 And I know it's a place to go
 
-
+<br>
 
 Calling you and the search is mistery
 
@@ -124,7 +124,7 @@ It's so hard when I try to be me
 
 Yeah!
 
-
+<br>
 
 See your body into the moonlight
 
@@ -134,7 +134,7 @@ All the pictures into the mind
 
 There's flashing in my eyes
 
-
+<br>
 
 Don't you see my condition?
 
@@ -144,7 +144,7 @@ Can't you see now illusions?
 
 Right into your mind
 
-
+<br>
 
 Déja Vu!
 
@@ -154,7 +154,7 @@ Higher on the street
 
 And I know it's my time to go
 
-
+<br>
 
 Calling you and the search is a mistery
 
@@ -164,7 +164,7 @@ It's so hard when I try to be me
 
 Wooh!
 
-
+<br>
 
 Déja Vu!
 
@@ -174,7 +174,7 @@ Higher on the beat
 
 And I know it's a place to go
 
-
+<br>
 
 Calling you and the search is mistery
 
