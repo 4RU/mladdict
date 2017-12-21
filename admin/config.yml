@@ -28,9 +28,8 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Hero Name", name: "category", widget: "hidden"}
-      - {label: "Hero Role", name: "role", widget: "hidden"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Hero Name", name: "category", widget: "string"}
+      - {label: "Hero Role", name: "role", widget: "string"}
       - label: "Purchase Order"
         name: "purchase"
         widget: "object"
