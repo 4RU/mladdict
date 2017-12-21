@@ -5,14 +5,14 @@ category: fanny
 role: assassin
 date: 20 December 2017
 purchase:
-  - phase: 1
-    items:
+  - items:
       - cursed sword
       - cursed sword
       - cursed sword
       - cursed sword
       - cursed sword
       - cursed sword
+    phase: 1
 skills:
   - img: skill-2.png
     level:
