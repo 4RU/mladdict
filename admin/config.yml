@@ -18,14 +18,11 @@ collections:
       - {label: "Tags", name: "tags", widget: "list"}
       - {label: "Body", name: "body", widget: "markdown"}
 
-  - name: "_guides" # Used in routes, e.g., /admin/collections/blog
+  - name: "guides" # Used in routes, e.g., /admin/collections/blog
     label: "Guides" # Used in the UI
-    folder: _guides/
+    folder: "_guides/"
     create: true
-    slug: {{ slug }}
-    filter:
-      field: category
-      value: fanny
+    slug: "{{ slug }}"
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "date"}
