@@ -27,23 +27,16 @@ collections:
       field: category
     fields:
       - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Publish Date", name: "date", widget: "date"}
       - {label: "Hero Name", name: "category", widget: "string"}
       - {label: "Hero Role", name: "role", widget: "string"}
       - label: "Purchase Order"
         name: "purchase"
-        widget: "object"
+        widget: "list"
         required: false
         fields:
-          - {label: "Build Number", name: "phase", widget: "hidden", default: "1"}
+          - {label: "Build Number", name: "phase", widget: "number"}
           - label: "Items"
             name: "items"
-            widget: "object"
-            fields:
-              - {label: "Item 1", name: "name", widget: "string"}
-              - {label: "Item 2", name: "name", widget: "string"}
-              - {label: "Item 3", name: "name", widget: "string"}
-              - {label: "Item 4", name: "name", widget: "string"}
-              - {label: "Item 5", name: "name", widget: "string"}
-              - {label: "Item 6", name: "name", widget: "string"}
+            widget: "list"
       - {label: "Body", name: "body", widget: "markdown"}
