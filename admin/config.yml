@@ -40,5 +40,5 @@ collections:
             name: "items"
             widget: "list"
             field:
-              - {label: "Item Name", name: "item", widget: string}
+              - {label: "Item Name", name: "item", widget: "string"}
       - {label: "Body", name: "body", widget: "markdown"}
