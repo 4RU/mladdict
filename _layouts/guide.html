@@ -23,7 +23,7 @@ layout: default
             <div class="guide-item">
               <h3 class="items-phase">{{ purchase.phase }}</h3>
               {% for items in purchase.items %}
-              <img src="/assets/gambar/items/{{ items.name | replace: ' ', '-' | replace: "'", "" | downcase | append: '.png' }}" alt="{{ items.name }}">
+              <img src="/assets/gambar/items/{{ items | replace: ' ', '-' | replace: "'", "" | downcase | append: '.png' }}" alt="{{ items.name }}">
               {% endfor %}
             </div>
             {% endfor %}

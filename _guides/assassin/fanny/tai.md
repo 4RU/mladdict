@@ -7,28 +7,28 @@ date: 20 December 2017
 purchase:
   - phase: 1
     items:
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
   - phase: 2
     items:
-      - name: tome of evil
-      - name: TOME OF EVIL
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
+      - tome of evil
+      - TOME OF EVIL
+      - cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
   - phase: 3
     items:
-      - name: tome of evil
-      - name: TOME OF EVIL
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
-      - name: cursed sword
+      - tome of evil
+      - TOME OF EVIL
+      - cursed sword
+      - cursed sword
+      - cursed sword
+      - cursed sword
 skills:
   - img: skill-2.png
     level:
