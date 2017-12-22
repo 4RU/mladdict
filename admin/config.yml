@@ -41,5 +41,5 @@ collections:
         required: false
         fields:
           - {label: "Skill Number", name: "number", widget: "number"}
-          - {label: "Levels", name: "levels", widget: "list", valueType: "int"}
+          - {label: "Levels", name: "levels", widget: "number_list"}
       - {label: "Body", name: "body", widget: "markdown"}
