@@ -18,7 +18,7 @@
           <a href="/hero/{{ heroes.role }}/{{ hero.name | downcase }}">
             <img class="hero-avatar" src="{{ hero.avatar }}" alt="{{ hero.name }}">
           </a>
-          <p>{{ hero.name }}</p>
+          <p><a href="/hero/{{ heroes.role }}/{{ hero.name | downcase }}">{{ hero.name }}</a></p>
         </div>
         {% endfor %}
       </div>
