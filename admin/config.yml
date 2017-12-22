@@ -35,7 +35,6 @@ collections:
         fields:
           - {label: "Build Number", name: "phase", widget: "number"}
           - {label: "Items", name: "items", widget: "list"}
-      - {label: "Body", name: "body", widget: "markdown"}
       - label: "Hero Skills"
         name: "skills"
         widget: "list"
@@ -43,3 +42,4 @@ collections:
         fields:
           - {label: "Skill Number", name: "number", widget: "number"}
           - {label: "Levels", name: "levels", widget: "list"}
+      - {label: "Body", name: "body", widget: "markdown"}
