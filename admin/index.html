@@ -12,5 +12,39 @@
 <body>
   <!-- Include the script that builds the page and powers Netlify CMS -->
   <script src="https://unpkg.com/netlify-cms@^1.0.0/dist/cms.js"></script>
+  <!-- Netlify CMS Custom Widget -->
+  <script>
+    var NumberListControl = createClass({
+      handleChange: function(e) {
+        var value = e.target.value.replace(/[^0-9, ]/, '');
+        this.props.onChange(value.split(',').map(function(val) {
+          var trimmed = val.trim();
+          return trimmed ? parseInt(trimmed, 10) : trimmed;
+        }));
+      },
+
+      render: function() {
+        var value = this.props.value;
+        return h('input', {
+          type: 'text',
+          value: value ? value.join(', ') : '',
+          onChange: this.handleChange,
+          className: this.props.classNameWrapper,
+        });
+      }
+    });
+
+    var NumberListPreview = createClass({
+      render: function() {
+        return h('ul', {},
+          this.props.value.map(function(val, index) {
+            return h('li', {key: index}, val);
+          })
+        );
+      }
+    });
+
+    CMS.registerWidget('number_list', NumberListControl, NumberListPreview);
+  </script>
 </body>
 </html>
