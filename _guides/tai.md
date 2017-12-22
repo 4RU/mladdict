@@ -14,103 +14,17 @@ purchase:
       - cursed sword
     phase: 1
 skills:
-  - img: skill-2.png
-    level:
-      - number: 1
-        fill: y
-      - number: 2
-        fill:
-      - number: 3
-        fill:
-      - number: 4
-        fill:
-      - number: 5
-        fill: y
-      - number: 6
-        fill:
-      - number: 7
-        fill:
-      - number: 8
-        fill:
-      - number: 9
-        fill:
-      - number: 10
-        fill: true
-      - number: 11
-        fill:
-      - number: 12
-        fill:
-      - number: 13
-        fill:
-      - number: 14
-        fill:
-      - number: 15
-        fill:
-
-  - img: skill-3.png
-    level:
-      - number: 1
-        fill: y
-      - number: 2
-        fill:
-      - number: 3
-        fill:
-      - number: 4
-        fill:
-      - number: 5
-        fill: y
-      - number: 6
-        fill:
-      - number: 7
-        fill:
-      - number: 8
-        fill:
-      - number: 9
-        fill:
-      - number: 10
-        fill: true
-      - number: 11
-        fill:
-      - number: 12
-        fill:
-      - number: 13
-        fill:
-      - number: 14
-        fill:
-      - number: 15
-        fill:
-
-  - img: skill-4.png
-    level:
-      - number: 1
-        fill: y
-      - number: 2
-        fill:
-      - number: 3
-        fill:
-      - number: 4
-        fill:
-      - number: 5
-        fill: y
-      - number: 6
-        fill:
-      - number: 7
-        fill:
-      - number: 8
-        fill:
-      - number: 9
-        fill:
-      - number: 10
-        fill: true
-      - number: 11
-        fill:
-      - number: 12
-        fill:
-      - number: 13
-        fill:
-      - number: 14
-        fill:
-      - number: 15
-        fill:
+  - number: 1
+    levels:
+      - 2
+      - 15
+  - number: 2
+    levels:
+      - 3
+      - 4
+  - number: 3
+    levels:
+      - 5
+      - 6
 ---
 ## sasdada
