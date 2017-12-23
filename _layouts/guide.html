@@ -67,7 +67,10 @@ layout: default
             {% for heroes in site.data.heroes %}
             <optgroup label="{{ heroes.role | capitalize }}">
               {% for hero in heroes.heroes %}
-              <option value="/hero/{{ heroes.role | downcase }}/{{ hero.name | downcase }}#guides-hero">{{ hero.name | capitalize }}</option>
+              {% assign herocaps = page.category | capitalize %}
+              <option value="/hero/{{ heroes.role | downcase }}/{{ hero.name | downcase }}#guides-hero" {% if hero.name == herocaps %}selected="selected"{% endif %}>
+                {{ hero.name | capitalize }}
+              </option>
               {% endfor %}
             </optgroup>
             {% endfor %}
