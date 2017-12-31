@@ -83,23 +83,26 @@
   - name: Eudora
     avatar: /assets/gambar/heroes/mage/eudora/eudora-avatar.png #4
 
+  - name: Fasha
+    avatar: /assets/gambar/heroes/mage/fasha/fasha-avatar.png #5
+
   - name: Gord
-    avatar: /assets/gambar/heroes/mage/gord/gord-avatar.png #5
+    avatar: /assets/gambar/heroes/mage/gord/gord-avatar.png #6
 
   - name: Harley
-    avatar: /assets/gambar/heroes/mage/harley/harley-avatar.png #6
+    avatar: /assets/gambar/heroes/mage/harley/harley-avatar.png #7
 
   - name: Kagura
-    avatar: /assets/gambar/heroes/mage/kagura/kagura-avatar.png #7
+    avatar: /assets/gambar/heroes/mage/kagura/kagura-avatar.png #8
 
   - name: Odette
-    avatar: /assets/gambar/heroes/mage/odette/odette-avatar.png #8
+    avatar: /assets/gambar/heroes/mage/odette/odette-avatar.png #9
 
   - name: Vexana
-    avatar: /assets/gambar/heroes/mage/vexana/vexana-avatar.png #9
+    avatar: /assets/gambar/heroes/mage/vexana/vexana-avatar.png #10
 
   - name: Zhask
-    avatar: /assets/gambar/heroes/mage/zhask/zhask-avatar.png #10
+    avatar: /assets/gambar/heroes/mage/zhask/zhask-avatar.png #11
 
 
 # ========= MARKSMAN =========
