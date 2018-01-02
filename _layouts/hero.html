@@ -113,7 +113,7 @@ comments: true
       <h1>Guides {{ page.name | capitalize }}</h1>
       <div class="hero-guide-wrap clearfix">
         {% assign name = page.name | downcase %}
-        {% assign nameup = page.name | upcase %}
+        {% assign nameup = page.name | capitalize %}
         {% assign guide_hero = site.guides | where:"category",name | where:"category",nameup %}
         {% for guide in guide_hero %}
         <div class="hero-guide box-shadow">
