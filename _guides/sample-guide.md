@@ -1,7 +1,7 @@
 ---
 title: Sample Guide
 date: 2018-01-02T02:38:19.937Z
-category: Fanny
+category: fanny
 role: Assassin
 purchase:
   - items:
@@ -12,7 +12,6 @@ skills:
       - 1
     number: '1'
 ---
- 
-##lul
 
+## lul
 lit
