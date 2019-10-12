@@ -1,2 +1,2 @@
-# mladdict
-Mobile Legends Fan Guide Website
+# MLGuides
+Mobile Legends Guide Website
